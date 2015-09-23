@@ -10,7 +10,7 @@ var User = new Schema (
 );
 
 
-// mongoose.connect('mongodb://localhost/passport-social-auth');
+mongoose.connect('mongodb://localhost/passport-social-auth');
 
 //this is where we create the collection in the database
 module.exports = mongoose.model('users', User);

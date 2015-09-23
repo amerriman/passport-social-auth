@@ -6,7 +6,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var swig = require('swig');
-var config = require('./oauth.js');
+// var config = require('./oauth.js');
 var mongoose = require('mongoose');
 var passport = require('passport');
 var session = require('express-session');
@@ -21,7 +21,7 @@ var app = express();
 
 
 // *** mongoose *** //
-mongoose.connect('mongodb://localhost/passport-social-auth');
+// mongoose.connect('mongodb://localhost/passport-social-auth');
 
 
 // *** view engine *** //
