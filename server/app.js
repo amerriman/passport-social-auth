@@ -6,7 +6,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var swig = require('swig');
-// var config = require('./oauth.js');
 var mongoose = require('mongoose');
 var passport = require('passport');
 var session = require('express-session');
@@ -22,6 +21,9 @@ var app = express();
 
 // *** mongoose *** //
 // mongoose.connect('mongodb://localhost/passport-social-auth');
+
+//database config
+var config = require('./config.js');
 
 
 // *** view engine *** //
@@ -47,13 +49,6 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-// app.use(session({
-//   secret: 'keyboard cat',
-//   resave: false,
-//   saveUninitialized: true
-// }));
-// app.use(passport.initialize());
-// app.use(passport.session());
 
 
 // *** main routes *** //
